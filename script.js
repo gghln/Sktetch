@@ -1,5 +1,11 @@
-let numRow = prompt("Choose number of Rows");
-let numCol = prompt("choose number of Cols");
+//Refresh Page
+function refresh(){
+    location.reload();
+}
+
+let numRow = document.getElementById("myRange").value;
+let numCol = document.getElementById("myRange").value;
+document.getElementById("sliderValue").innerHTML = numRow + " X " + numCol;
 gridSize = numRow * numCol;
 
 //Change number of rows and cols on CSS file
@@ -21,15 +27,18 @@ square.style.setProperty("height", 500/ gridSize);
 
 //Paint Grid
 containers = document.getElementsByClassName("grid-item");
-
+//Change Color
+function  changeColor(){
+    color = document.getElementById("colorpicker").value;
+}
+color = "black";
 for(let container of containers){
     container.addEventListener("mouseenter", function(){
-        container.style.backgroundColor = "black"
+        container.style.backgroundColor = color;
     });
 }
 
 function hello(){
-    console.log("Hello");
     for(let container of containers){
         container.style.backgroundColor = "white";
     }

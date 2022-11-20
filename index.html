@@ -9,9 +9,21 @@
     <script src="script.js" defer></script> 
 </head>
 <body>
-    <div id="grid-container">
-    </div> 
+    <h1>Hello you can draw in this site</h1>
+    <div id="main">
+        <div id="infos">
+            <div class="slidecontainer">
+                <div id="sliderValue"></div>
+                <input onclick="refresh()" class="slider" id="myRange" type="range" min="8" max="64" step="8" value="8">
+            </div>
+            <button onclick="hello()">Clear</button>
+            <input onchange ="changeColor()" type="color" id="colorpicker" value="black">
+        </div>
+        <div id="grid-container">
+        </div>
+    </div>
+     
 
-    <button onclick="hello()">Clear</button>
+    
 </body>
 </html>
